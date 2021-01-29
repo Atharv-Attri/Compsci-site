@@ -4,6 +4,17 @@
 <head>
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Ageism: {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+    <link href="/static/scroll.css" rel="stylesheet">
+
+    <link href="/static/styles.css" rel="stylesheet">
 
 </head>
 
@@ -22,11 +33,9 @@
                 class="items-center px-8 py-3 mt-4 font-semibold text-blue-700 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:inline-flex lg:ml-auto lg:mt-px hover:border-blue-700 hover:text-white focus:ring focus:outline-none bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500">Take The Pledge
             </button>
         </div>
-    </header>
-    <div class="container w-full p-20 m-4 mx-auto my-16 text-center bg-black h-96 rounded-xl">
+    </header>    
+    
         {% block main %}{% endblock %}
-
-    </div>
 
 </body>
 
