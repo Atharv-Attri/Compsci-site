@@ -41,3 +41,13 @@ assets.register('css', css)
 @app.route("/")
 def home():
     return render_template("index.html") 
+
+
+@app.route("/what-is-it")
+def what():
+    return render_template("what.html")
+
+
+@app.route("/why-care")
+def what():
+    return render_template("why.html")
