@@ -4,11 +4,26 @@
 
 {% block main %}
 
- <form action="/quote" method="post">
-        <div class="form-group">
-            <input autocomplete="off" autofocus class="form-control" name="Symbol" placeholder="Symbol" type="text">
+<div class="w-full">
+    <div class="h-2 bg-indigo"></div>
+      <div class="flex items-center justify-center h-screen">
+        <div class="container mx-24 rounded shadow-lg" style="background-color: #111;">
+          <div class="px-12 py-6">
+            <div class="text-center">
+              <h1 class="font-normal text-3xl text-grey-darkest leading-loose my-3 w-full">Pledge to fight back against Ageism</h1>
+              <div class="w-full text-center">
+                <form action="/pledge" method="post">
+                  <div class="max-w-sm mx-auto p-1 pr-0 flex items-center">
+                    <input type="email" placeholder="jenny.rose@example.com" name="email" class="flex-1 appearance-none rounded shadow p-3 text-grey-dark mr-2 focus:outline-none">
+                    <button type="submit" class="appearance-none text-white text-base font-semibold tracking-wide uppercase p-3 rounded shadow hover:bg-indigo-light" style="background-color: #222;">Join</button>
+                  </div>
+                </form>
+              </div>
+              <h6 class="font-normal text-3l text-grey-darkest leading-loose my-3 w-full">I'll just send you one email occasionally </h6>
+              <h6 class="font-normal text-3l text-grey-darkest leading-loose my-3 w-full">It might take a few seconds as we send the email, but hold on, it's working!</h6>
+            </div>
+          </div>
         </div>
-       
-        <button class="btn btn-primary" type="submit">Look Up</button>
-    </form>
+      </div>
+  </div>
 {% endblock %}

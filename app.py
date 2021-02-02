@@ -4,7 +4,7 @@ from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 
-import email
+import emailer
 import text
 # Configure application
 app = Flask(__name__)
@@ -61,4 +61,6 @@ def pledge():
         return render_template("pledge.html")
 
     toaddr = request.form.get("email")
-    email.send(toaddr)
+    print(toaddr)
+    emailer.send(toaddr)
+    return redirect("/")
