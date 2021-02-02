@@ -39,7 +39,8 @@ def home():
 
 @app.route("/what-is-it")
 def what():
-    return render_template("what.html")
+    info = text.what_text()
+    return render_template("what.html", source=info["source"], text=info["text"])
 
 
 @app.route("/why-care")
