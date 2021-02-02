@@ -1,6 +1,8 @@
 # import Smart Mail Transfer Protocol
 import smtplib
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 def send(toaddr):
@@ -16,12 +18,9 @@ def send(toaddr):
     s.login(email, token)
 
     # message to be sent
-    message = """<text you want>"""
-    i = 0
-    num = 50  # the number of emails you want to send
-    while i < num:
-        # send the mail
-        s.sendmail(email, toaddr, message)
-        print("sent email")
-        # terminating the session
+    message = "Hello!\nI just wanted to remind you that you promised to fight back against ageism!\nI wish you luck!\nAtharv"
+    # send the mail
+    s.sendmail(email, toaddr, message)
+    # terminating the session
     s.quit()
+
