@@ -5,8 +5,9 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
-
 import subprocess
+
+import email
 # Configure application
 app = Flask(__name__)
 
@@ -38,6 +39,7 @@ assets.init_app(app)
 css = Bundle('src/css/*.css', filters='postcss', output='dist/css/main.css')
 assets.register('css', css)
 
+
 @app.route("/")
 def home():
     return render_template("index.html") 
@@ -49,5 +51,19 @@ def what():
 
 
 @app.route("/why-care")
-def what():
+def why():
     return render_template("why.html")
+
+
+@app.route("/how-help")
+def how():
+    return render_template("why.html")
+
+
+@app.route("/pledge",methods=["GET","POST"])
+def pledge():
+    if request.method == "GET":
+        return render_template("pledge.html")
+    
+    toaddr = request.form.get("email")
+    email.send(toaddr)
