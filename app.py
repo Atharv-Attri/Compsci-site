@@ -6,6 +6,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 import emailer
 import text
+
 # Configure application
 app = Flask(__name__)
 

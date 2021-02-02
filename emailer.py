@@ -2,6 +2,7 @@
 import smtplib
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 
@@ -23,4 +24,3 @@ def send(toaddr):
     s.sendmail(email, toaddr, message)
     # terminating the session
     s.quit()
-
