@@ -51,7 +51,8 @@ def why():
 
 @app.route("/how-help")
 def how():
-    return render_template("why.html")
+    info = text.how_text()
+    return render_template("how.html", source=info["source"], text=info["text"])
 
 
 @app.route("/pledge", methods=["GET", "POST"])

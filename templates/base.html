@@ -33,10 +33,16 @@
                 class="items-center px-8 py-3 mt-4 font-semibold text-blue-700 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:inline-flex lg:ml-auto lg:mt-px hover:border-blue-700 hover:text-white focus:ring focus:outline-none bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500">Take The Pledge
             </button>
         </div>
-    </header>    
-    
+    </header>
+    <div class="text-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16" style="margin-left:50%;margin-top:5%">
+        <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+      </svg>
+    </div>
         {% block main %}{% endblock %}
-
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+        </script>
+        <script src="./static/fadein.js"> </script>
 </body>
 
 </html>

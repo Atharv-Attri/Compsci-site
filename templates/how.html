@@ -4,4 +4,17 @@
 
 {% block main %}
 
+{% for i in text %}
+<section class="text1" style="background-color: rgb(5, 5, 5); padding-top: 50px; padding-left:5%;">
+    <h3 style="font-family: 'Roboto', sans-serif; font-size: 60px;color:white;">{{ i }}</h1>
+  </section>
+  
+{% endfor %}
+<section class="text1" style="background-color: rgb(5, 5, 5); padding-top: 50px; padding-left:5%;">
+    <h1 style="font-family: 'Roboto', sans-serif; font-size: 60px;color:white; background:
+    -webkit-linear-gradient(10deg,#3494E6,#EC6EAD,#FFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"><a href={{ source }}>Go To Source</a></h1>
+  </section>
+
 {% endblock %}

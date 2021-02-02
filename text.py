@@ -17,7 +17,7 @@ def what_text() -> dict:
 def how_text() -> dict:
     text = """If nothing else, this is clear: For every step we take to fight ageism against Elders, we need to take an equivalent one for youth. For every Elder’s story that you listen to, take some time to get to know a young person. Ageism against any age group will never truly be defeated, unless we simultaneously deal with how it affects young and old alike. Doing so also builds a much-needed bridge between Elders and young people. As natural allies, they need each other, perhaps now more than ever."""
     text = seperate(text)
-    source = "https://en.wikipedia.org/wiki/Ageism"
+    source = "https://changingaging.org/culture-change/ageism-not-just-for-grown-ups/"
     return {"text": text, "source": source}
 
 
